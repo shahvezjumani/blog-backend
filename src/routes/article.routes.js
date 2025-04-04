@@ -8,7 +8,6 @@ import {
 import { verifyJWT } from "../middlewares/auth.middleware.js";
 import { upload } from "../middlewares/multer.middleware.js";
 import { Router } from "express";
-
 const router = Router();
 
 router.use(verifyJWT);
@@ -22,3 +21,4 @@ router
   .post(upload.single("featuredImage"), updatePost);
 
 export default router;
+
